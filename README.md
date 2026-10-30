@@ -96,7 +96,7 @@ void pushAlert(uint8_t code, uint8_t info, uint32_t secs) {
  int next = (qHead + 1) % QSIZE;
  if (next == qTail) return;                    // queue full: drop
  alertQ[qHead] = { code, info, secs };
- qHead = next;
+ qHead = next; 
 }
  
 // ---- LCD ----
